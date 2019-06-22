@@ -496,6 +496,7 @@ class StateMachineFragmentIR:
 @click.argument('source_fname')
 @click.argument('lambda_arn')
 def main(source_fname, lambda_arn):
+    """Compile an AWS Step Function from Python code."""
     syntax_tree = ast.parse(source=open(source_fname, 'rt').read(),
                             filename=source_fname)
 

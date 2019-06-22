@@ -50,6 +50,7 @@ def zinfo(fname):
 @click.argument('code_filename')
 @click.argument('zip_filename')
 def compile_zipfile(code_filename, zip_filename):
+    """Generate AWS Lambda function zip."""
     code_basename = os.path.basename(code_filename)
     code_modulename = os.path.splitext(code_basename)[0]
     handler_content = template.format(code_modulename=code_modulename)
