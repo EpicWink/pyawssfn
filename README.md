@@ -115,7 +115,7 @@ Output:
 ## Wrap original Python ready for Lambda
 
 ```bash
-python -m pysfn lambda examples/analyse_text.py lambda-function.zip
+pysfn lambda examples/analyse_text.py lambda-function.zip
 unzip -l lambda-function.zip
 ```
 
@@ -138,7 +138,7 @@ and note its ARN for use in the next step.
 ## Compile original Python into Step Function JSON
 
 ```bash
-python -m pysfn compile examples/analyse_text.py LAMBDA-FUN-ARN > examples/stepfun.json
+pysfn compile examples/analyse_text.py LAMBDA-FUN-ARN > examples/stepfun.json
 cat examples/stepfun.json
 ```
 

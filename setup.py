@@ -43,4 +43,5 @@ setuptools.setup(
     python_requires="~=3.6",
     install_requires=["click", "attrs"],
     extras_require={"dev": ["pytest"]},
-    project_urls={"Bugs": "https://github.com/bennorth/pyawssfn/issues"})
+    project_urls={"Bugs": "https://github.com/bennorth/pyawssfn/issues"},
+    entry_points={"console_scripts": ["pysfn=pysfn.__main__:cli"]})
